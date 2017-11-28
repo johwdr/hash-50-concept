@@ -1,26 +1,56 @@
-  #starter{
-	width:100px;
-	height:50px;
-	background: #CCCCCC;
+@font-face {
+    font-family: "gibsonRegular";
+    src: url("http://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.eot");
+    src: url("http://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("http://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.woff2") format("woff2"),
+    url("http://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.woff") format("woff"),
+    url("http://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.ttf") format("truetype"),
+    url("http://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.svg") format("svg");
+    font-weight: normal;
+}
+@font-face{
+    font-family:"gibsonSemiBold";
+    src:url("http://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.eot");
+    src:url("http://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("http://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.woff2") format("woff2"),
+    url("http://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.woff") format("woff"),
+    url("http://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.ttf") format("truetype"),
+    url("http://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.svg") format("svg");
+    font-weight:normal
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "gibsonRegular";
+}
 
+h1 {
+    font-family: "gibsonSemiBold";
+}
+h1 {
+    text-align: center;
+}
+.intro {
 
-#wrapper {
+    font-size: 125%;
+    max-width: 300px;
+    margin: 0px auto 40px;
+}
+.card {
+    max-width: 300px;
+    margin: 0px auto 40px;
+    min-height: 400px;
+}
+#coins {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #ff0000;
 }
-
-.bottom-box {
-    padding: 40px;
-    position: absolute;
-    bottom: 20px;
-    background: #000;
-    color: #fff;
-    left: 20px;
-    max-width: 40px;
+.coin {
+    height: 10px;
+    margin-bottom: 2px;
+    background: #aaa;
+    width: 30px;
+}
+.hidden {
+    display: none;
 }

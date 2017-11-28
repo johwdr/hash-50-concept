@@ -1,7 +1,7 @@
 require('../styles/styles.scss');
 
 
-import Example from './components/example/example-component';
+import Coins from './components/coins/coins-component';
 
 
 
@@ -10,7 +10,7 @@ import Example from './components/example/example-component';
 function init() {
 
 
-    const ex = new Example();
+    const coins = new Coins();
 
 
 }
