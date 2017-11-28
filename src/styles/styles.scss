@@ -57,6 +57,7 @@ h1 {
     margin-bottom: 2px;
     background: #aaa;
     width: 4vh;
+    transition: opacity .3s;
 }
 .hidden {
     opacity: 0.1;

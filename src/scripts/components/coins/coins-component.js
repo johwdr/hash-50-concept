@@ -10,6 +10,14 @@ export default class Coins {
 
         this.build();
         this.setup();
+        this.coinValues = {
+            customer: 50,
+            pusher: 45,
+            rocker: 30,
+            grossist: 20,
+            smuggler: 10,
+            farmer: 4
+        }
 
     }
 
@@ -27,6 +35,42 @@ export default class Coins {
 
         const step = document.body.scrollHeight + window.innerHeight / 50;
 
+
+
+
+          var options = {
+            root: null,
+            rootMargin: "0px",
+          };
+
+          const observer = new IntersectionObserver((entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    console.log(entries[0].target.dataset.type);
+
+                    var pctScrolled = this.coinValues[entries[0].target.dataset.type];
+                    for (let n=0; n<=50; n++) {
+
+                        const coin = select('.coin-' + n);
+                        //console.log(n, pctScrolled)
+                        if (n < 50-pctScrolled) {
+                            coin.classList.add('hidden')
+                        } else {
+                            coin.classList.remove('hidden')
+                        }
+                    }
+                }
+
+          }, options);
+
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+            observer.observe(card);
+          });
+
+
+
+          /*
         window.addEventListener('scroll', (e) => {
 
 
@@ -44,13 +88,13 @@ export default class Coins {
                     } else {
                         coin.classList.remove('hidden')
                     }
-                }
+                }*/
 
 
 
-        });
+
     }
-
+    /*
     getDocHeight() {
         var D = document;
         return Math.max(
@@ -61,6 +105,6 @@ export default class Coins {
     }
     handleScroll(e) {
         console.log(e)
-    }
+    }*/
 
 }
