@@ -42,8 +42,11 @@ h1 {
 .card {
     max-width: 300px;
     margin: 0px auto 40px;
-    min-height: 400px;
+    img {
+        max-width: 100%;
+    }
 }
+
 #coins {
     position: fixed;
     top: 0px;
