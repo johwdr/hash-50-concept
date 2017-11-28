@@ -1,4 +1,6 @@
 require('../styles/styles.scss');
+require('intersection-observer');
+
 
 
 import Coins from './components/coins/coins-component';
